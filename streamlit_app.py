@@ -4,7 +4,7 @@ import random
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-data = pd.read_csv("fashion_products.csv")
+data = pd.read_csv("books.csv",sep="/")
 
 # Create interaction matrix and find similarity
 interaction_matrix = data.pivot_table(index='User ID', columns='Product ID', values='Rating', fill_value=0)
